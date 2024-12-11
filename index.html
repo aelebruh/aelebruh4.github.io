@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html amp lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900&display=swap">
+    <style amp-custom>
+body {
+    background-color: black;
+}
+
+.home-container {
+    height: 875px;
+    background-image: url("assets/stars.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header .logo {
+    text-align: center;
+    display: flex;
+}
+
+header .logo .logo-upper-text {
+    font-size: 24px;
+    color: white;
+}
+
+header .logo .logo-lower-text {
+    align-self: flex-end;
+    margin-left: 5px;
+    padding: 2px 5px;
+    font-size: 14px;
+    background-color: #f9d92b;
+    color: black;
+    border-radius: 5px;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    background-color: #f9d92b;
+    color: black;
+}
+
+.text {
+    font-weight: 200;
+    font-size: 40px;
+    font-family: "Roboto";
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.register-container {
+    max-width: 700px;
+    margin: 10% auto 0;
+    padding: 20px;
+}
+
+.register-container .register-form-upper-text,
+.register-container .register-form-lower-text {
+    font-weight: 200;
+    font-size: 40px;
+    font-family: "Roboto";
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.register-container .register-form-lower-text {
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.register-container form .form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.register-container form .form-group input {
+    border-radius: 4px;
+    font-size: 1em;
+    padding: 15px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.register-container form .form-group button {
+    background-color: #f9d92b;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0 40px;
+}
+
+.about-us-container {
+    display: flex;
+    justify-content:center; 
+    background-color: rgb(25,27,40);
+    text-align: left;
+    color: white;
+    font-family: "Roboto";
+    max-height: 600px;
+}
+
+.about-us-body {
+    display: flex;
+    align-items: center;
+    max-width: 75%;
+}
+
+/* .about-column {
+    margin: 0 10px;
+    width: 100%;
+} */
+
+.about-column .our-service-container {
+    padding: 20px;
+}
+
+.about-column .our-service-container .service-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: left;
+    width: fit-content;
+}
+
+.about-column .our-service-container .service-title .logo-service img {
+    width: 80%;
+    height: auto;
+}
+
+.about-column .our-service-container {
+    font-size: 16px;
+    font-weight: 100;
+    margin-bottom: 15px;
+}
+
+.about-center-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -80px;
+    width: 100%;
+}
+
+
+.about-center-column .logo-service {
+    max-width: 10%;
+    height: auto;
+}
+
+
+.our-team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(249, 217, 73);
+    height: 600px;
+}
+
+.our-team-container .meet-our-team-title {
+    font-family: "Roboto";
+    margin: 70px 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.our-team-container .meet-our-team-title .our-team-upper-text {
+    font-size: 45px;
+    font-weight: 300;
+}
+
+.our-team-container .meet-our-team-title .our-team-lower-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.our-team-container .our-team-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 75%;
+    font-family: "Roboto";
+}
+
+.our-team-container .our-team-container .team-person {
+    margin: 10px;
+    text-align: center;
+}
+
+.our-team-container .our-team-container .team-person .person-icon img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.our-team-container .our-team-container .team-person .person-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 20px;
+}
+
+.our-team-container .our-team-container .team-person .person-info {
+    margin-top: 5px;
+    color: gray;
+}
+
+    </style>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>PSD TO HTML</title>
+</head>
+<body>
+    <div class="home-container">
+        <header>
+            <div class="logo">
+                <div class="logo-upper-text">
+                    URANOS
+                </div>
+                <div class="logo-lower-text">
+                    PSD
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about_us">ABOUT US</a></li>
+                    <li><a href="#our_team">OUR TEAM</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="register-container">
+            <div class="register-form-upper-text">Discover the world of awesome</div>
+            <div class="register-form-lower-text">free psd templates</div>
+            <form id="registration-form" method="post" action-xhr="/submit">
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder="EMAIL">
+                    <input type="password" id="password" name="password" required placeholder="PASSWORD">
+                    <button type="submit">REGISTER</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="about-us-container">
+       <div class="about-us-body">
+        <div class="about-column">
+            <div class="our-service-container">
+                <div class="logo-service">
+                    <amp-img src="assets/icon5.png" width="50" height="50" alt=""></amp-img>
+                </div>
+                <div class="service-title">Print Services</div>
+                <div class="service-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis incidunt atque quas magni consectetur?
+                </div>
+            </div>
+            <div class="our-service-container">
+                <div class="service-title">
+                    <div class="logo-service">
+                        <img src="assets/icon6.png"  alt="">
+                    </div>
+                    <div class="service-title">
+                        Print Services
+                    </div>
+                </div>
+                <div class="service-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis incidunt atque quas magni consectetur?
+                </div>
+            </div>
+        </div>
+        <div class="about-center-column">
+            <amp-img src="assets/phone.png" width="200" height="400" alt=""></amp-img>
+        </div>
+        <div class="about-column">
+            <div class="our-service-container">
+                <div class="service-title">
+                    <div class="logo-service">
+                        <img src="assets/icon7.png"  alt="">
+                    </div>
+                    <div class="service-title">
+                        Print Services
+                    </div>
+                </div>
+                <div class="service-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis incidunt atque quas magni consectetur?
+                </div>
+            </div>
+            <div class="our-service-container">
+                <div class="service-title">
+                    <div class="logo-service">
+                        <img src="assets/icon8.png"  alt="">
+                    </div>
+                    <div class="service-title">
+                        Print Services
+                    </div>
+                </div>
+                <div class="service-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis incidunt atque quas magni consectetur?
+                </div>
+            </div>
+        </div>
+       </div>
+    </div>
+    <div class="our-team-container">
+        <div class="meet-our-team-title">
+            <div class="our-team-upper-text">Meet our team</div>
+            <div class="our-team-lower-text">We make this APP!</div>
+        </div>
+        <div class="our-team-container">
+            <div class="team-person">
+                <div class="person-icon">
+                    <amp-img src="assets/person1.png" width="100" height="100" alt=""></amp-img>
+                </div>
+                <div class="person-name">Lorem Ipsum</div>
+                <div class="person-info">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum nulla doloribus recusandae.
+                </div>
+            </div>
+            <div class="team-person">
+                <div class="person-icon">
+                    <amp-img src="assets/person2.png" width="100" height="100" alt=""></amp-img>
+                </div>
+                <div class="person-name">Lorem Ipsum</div>
+                <div class="person-info">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum nulla doloribus recusandae.
+                </div>
+            </div>
+            <div class="team-person">
+                <div class="person-icon">
+                    <amp-img src="assets/person3.png" width="100" height="100" alt=""></amp-img>
+                </div>
+                <div class="person-name">Lorem Ipsum</div>
+                <div class="person-info">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum nulla doloribus recusandae.
+                </div>
+            </div>
+            <div class="team-person">
+                <div class="person-icon">
+                    <amp-img src="assets/person4.png" width="100" height="100" alt=""></amp-img>
+                </div>
+                <div class="person-name">Lorem Ipsum</div>
+                <div class="person-info">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum nulla doloribus recusandae.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
